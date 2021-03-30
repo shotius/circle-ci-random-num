@@ -97,7 +97,7 @@ describe.only('stubbing', function() {
         cy.spy(user, 'fail')
 
         const name = user.getName(123)
-        // const email = user.updateEmail('example@email.com')
+        const email = user.updateEmail('example@email.com')
 
         expect(name).to.eq("Jane Lane")
 
