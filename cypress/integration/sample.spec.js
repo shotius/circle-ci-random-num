@@ -36,7 +36,7 @@ describe('load live server', function() {
         cy.get('body').should('not.have', 'a')
     })
 
-    it.only('find text which does not exist', function() {
+    it('find text which does not exist', function() {
         cy.get('body').then(($body) => {
             if ($body.text().includes('text which does not exist')){
                 cy.log('text found')
@@ -47,7 +47,7 @@ describe('load live server', function() {
     })
 })
 
-describe.only('stubbing', function() {
+describe('stubbing', function() {
     it('create get and post methods', function() {
         cy.intercept(
             {
